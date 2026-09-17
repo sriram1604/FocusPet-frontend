@@ -1,5 +1,5 @@
 import React from "react";
-import { Download, Check, ShieldCheck, ExternalLink, HardDrive, Monitor } from "lucide-react";
+import { Download, Check, ShieldCheck, ExternalLink, Monitor } from "lucide-react";
 import { WindowsIcon } from "@/components/Icons";
 import { SITE_CONFIG } from "@/lib/site-config";
 

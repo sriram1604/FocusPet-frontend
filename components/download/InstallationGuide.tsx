@@ -5,7 +5,6 @@ import {
   Download,
   FolderArchive,
   FolderOpen,
-  Chrome,
   Compass,
   KeyRound,
   CheckCircle2,
@@ -14,9 +13,6 @@ import {
   AlertTriangle,
   FileCode,
   ShieldCheck,
-  HelpCircle,
-  Play,
-  Monitor,
 } from "lucide-react";
 import { ChromeIcon, WindowsIcon } from "@/components/Icons";
 import { SITE_CONFIG } from "@/lib/site-config";

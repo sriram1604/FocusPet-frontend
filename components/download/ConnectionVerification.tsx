@@ -3,12 +3,10 @@
 import React, { useState } from "react";
 import {
   Activity,
-  ArrowRight,
   CheckCircle2,
   Cpu,
   Monitor,
   Radio,
-  Sparkles,
   Zap,
 } from "lucide-react";
 import { ChromeIcon } from "@/components/Icons";

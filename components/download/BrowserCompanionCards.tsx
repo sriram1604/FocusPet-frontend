@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { ChromeIcon } from "@/components/Icons";
-import { Compass, Download, ExternalLink, ShieldCheck, FolderArchive, Info, ArrowRight } from "lucide-react";
+import { Compass, Download, ExternalLink, ShieldCheck, Info, ArrowRight } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/site-config";
 
 export function BrowserCompanionCards() {

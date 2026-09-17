@@ -1,6 +1,6 @@
 import React from "react";
-import { Cpu, ShieldCheck, HardDrive, Monitor, Layers, ExternalLink } from "lucide-react";
-import { GithubIcon, WindowsIcon } from "@/components/Icons";
+import { Cpu, ShieldCheck, ExternalLink } from "lucide-react";
+import { GithubIcon } from "@/components/Icons";
 import { SITE_CONFIG } from "@/lib/site-config";
 
 export function SystemSpecs() {

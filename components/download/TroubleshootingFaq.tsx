@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, HelpCircle, AlertCircle, CheckCircle2, ShieldAlert } from "lucide-react";
+import { ChevronDown, HelpCircle, CheckCircle2 } from "lucide-react";
 
 interface FaqItem {
   id: string;
