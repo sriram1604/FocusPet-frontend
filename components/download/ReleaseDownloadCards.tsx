@@ -1,5 +1,5 @@
 import React from "react";
-import { Download, Check, ShieldCheck, ExternalLink, Monitor } from "lucide-react";
+import { Download, Check, ShieldCheck, ExternalLink, Monitor, ShieldAlert } from "lucide-react";
 import { WindowsIcon } from "@/components/Icons";
 import { SITE_CONFIG } from "@/lib/site-config";
 
@@ -142,6 +142,22 @@ export function ReleaseDownloadCards() {
             <Monitor className="w-4 h-4 text-purple-600" />
             <span>Windows 10 / 11 (64-bit)</span>
           </div>
+        </div>
+
+        {/* Windows Defender SmartScreen quick tip banner */}
+        <div className="mt-4 p-3.5 rounded-2xl bg-blue-50/70 border border-blue-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs text-blue-950">
+          <div className="flex items-center gap-2">
+            <ShieldAlert className="w-4 h-4 text-blue-600 shrink-0" />
+            <span>
+              <strong>Windows Defender Notice:</strong> If prompted with <em>&quot;Windows protected your PC&quot;</em>, click <strong>&quot;More info&quot; &rarr; &quot;Run anyway&quot;</strong>.
+            </span>
+          </div>
+          <a
+            href="#installation-guide"
+            className="text-[11px] font-bold text-blue-700 hover:text-blue-900 underline shrink-0 whitespace-nowrap sm:self-auto self-start"
+          >
+            See 2-step visual guide &darr;
+          </a>
         </div>
       </div>
     </div>

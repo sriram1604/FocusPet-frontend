@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import {
   Download,
   FolderArchive,
@@ -13,6 +14,8 @@ import {
   AlertTriangle,
   FileCode,
   ShieldCheck,
+  ShieldAlert,
+  Info,
 } from "lucide-react";
 import { ChromeIcon, WindowsIcon } from "@/components/Icons";
 import { SITE_CONFIG } from "@/lib/site-config";
@@ -160,6 +163,95 @@ export function InstallationGuide() {
                 <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs">
                   <span className="font-bold text-slate-900 block mb-1">3. Launch Pet</span>
                   <span className="text-slate-600">The FocusPet desktop pet will appear on screen</span>
+                </div>
+              </div>
+
+              {/* Microsoft Defender SmartScreen Guidance */}
+              <div className="my-5 rounded-2xl bg-gradient-to-br from-sky-50/90 via-blue-50/60 to-indigo-50/70 border border-sky-200/90 p-5 sm:p-6 shadow-xs">
+                <div className="flex items-start gap-3 mb-4">
+                  <div className="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-sm shadow-blue-600/20">
+                    <ShieldAlert className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-blue-100/90 text-blue-900 text-[11px] font-bold uppercase tracking-wider mb-1">
+                      <Info className="w-3 h-3 text-blue-700" />
+                      <span>Microsoft Defender SmartScreen Notice</span>
+                    </div>
+                    <h4 className="text-sm sm:text-base font-bold text-slate-900">
+                      Windows blocked the installer? (&quot;Windows protected your PC&quot;)
+                    </h4>
+                    <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                      As a newly released independent application, Microsoft Defender SmartScreen may display a blue prompt. Simply follow these <strong>2 quick steps</strong>:
+                    </p>
+                  </div>
+                </div>
+
+                {/* 2 Step Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {/* Step 1 */}
+                  <div className="bg-white rounded-xl border border-sky-200/90 p-4 shadow-2xs flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <span className="w-5 h-5 rounded-md bg-blue-600 text-white text-[11px] font-bold flex items-center justify-center shrink-0">
+                          1
+                        </span>
+                        <span className="text-xs sm:text-sm font-bold text-slate-900">
+                          Click &quot;More info&quot;
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-slate-600 mb-3 leading-relaxed">
+                        On the blue SmartScreen dialog, click the underlined <strong className="text-blue-700 underline">More info</strong> link below the text.
+                      </p>
+                    </div>
+
+                    <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-slate-200 bg-slate-900 shadow-inner">
+                      <Image
+                        src="/images/defender-steps/step-1.png"
+                        alt="Step 1: Click More info on Windows Defender SmartScreen"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 380px"
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="mt-2 text-center text-[10px] font-medium text-slate-500">
+                      Step 1: Click <span className="text-blue-600 font-bold underline">More info</span> link
+                    </div>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div className="bg-white rounded-xl border border-sky-200/90 p-4 shadow-2xs flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <span className="w-5 h-5 rounded-md bg-blue-600 text-white text-[11px] font-bold flex items-center justify-center shrink-0">
+                          2
+                        </span>
+                        <span className="text-xs sm:text-sm font-bold text-slate-900">
+                          Click &quot;Run anyway&quot;
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-slate-600 mb-3 leading-relaxed">
+                        The window will reveal app details. Click the <strong className="text-emerald-700 font-bold">Run anyway</strong> button to launch the installer.
+                      </p>
+                    </div>
+
+                    <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-slate-200 bg-slate-900 shadow-inner">
+                      <Image
+                        src="/images/defender-steps/step-2.png"
+                        alt="Step 2: Click Run anyway on Windows Defender SmartScreen"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 380px"
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="mt-2 text-center text-[10px] font-medium text-slate-500">
+                      Step 2: Click <span className="text-emerald-700 font-bold bg-emerald-50 border border-emerald-300 px-1 py-0.5 rounded">Run anyway</span> button
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-3.5 pt-3 border-t border-sky-200/60 flex items-center gap-2 text-[11px] text-slate-600">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                  <span><strong>100% Safe &amp; Clean:</strong> FocusPet runs locally on your PC with zero telemetry.</span>
                 </div>
               </div>
 

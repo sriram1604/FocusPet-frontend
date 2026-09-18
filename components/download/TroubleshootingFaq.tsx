@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, HelpCircle, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+import { ChevronDown, HelpCircle, CheckCircle2, ShieldAlert } from "lucide-react";
 
 interface FaqItem {
   id: string;
@@ -20,6 +21,64 @@ export function TroubleshootingFaq() {
   };
 
   const faqs: FaqItem[] = [
+    {
+      id: "item-smartscreen",
+      question: "Windows Defender / SmartScreen blocked FocusPet ('Windows protected your PC')",
+      category: "Installation",
+      answer: (
+        <div className="space-y-3.5 text-xs sm:text-sm text-slate-600 leading-relaxed">
+          <p>
+            When opening <code className="font-mono text-purple-700 font-semibold">FocusPet-Setup.exe</code> on Windows 10 or 11, Microsoft Defender SmartScreen may display a blue dialog stating <strong>&quot;Windows protected your PC&quot;</strong>. This is standard for newly released software before Microsoft builds up automated download telemetry.
+          </p>
+
+          <div className="p-3.5 rounded-xl bg-blue-50/80 border border-blue-200 text-blue-950 font-medium text-xs">
+            💡 <strong>Quick Solution:</strong> Click <strong>&quot;More info&quot;</strong>, then click <strong>&quot;Run anyway&quot;</strong>.
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span className="font-bold text-slate-900 block mb-1 text-xs">
+                Step 1: Click &quot;More info&quot;
+              </span>
+              <p className="text-[11px] text-slate-500 mb-2">
+                Click the underlined link on the blue warning screen.
+              </p>
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-slate-300 bg-slate-950">
+                <Image
+                  src="/images/defender-steps/step-1.png"
+                  alt="Step 1: Click More info"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 300px"
+                  className="object-contain"
+                />
+              </div>
+            </div>
+
+            <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+              <span className="font-bold text-slate-900 block mb-1 text-xs">
+                Step 2: Click &quot;Run anyway&quot;
+              </span>
+              <p className="text-[11px] text-slate-500 mb-2">
+                Click the newly visible button to start the installation.
+              </p>
+              <div className="relative aspect-[4/3] rounded-lg overflow-hidden border border-slate-300 bg-slate-950">
+                <Image
+                  src="/images/defender-steps/step-2.png"
+                  alt="Step 2: Click Run anyway"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 300px"
+                  className="object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          <p className="text-[11px] text-slate-500">
+            FocusPet is completely safe, 100% offline, and does not collect or transmit personal telemetry.
+          </p>
+        </div>
+      ),
+    },
     {
       id: "item-1",
       question: "Extension Not Installed / Status shows 'Waiting'",
