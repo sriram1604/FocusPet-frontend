@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Download, BookOpen, ExternalLink, Monitor, ShieldCheck, Sparkles } from "lucide-react";
+import { Download, BookOpen, PlayCircle, ExternalLink, Monitor, ShieldCheck, Sparkles } from "lucide-react";
 import { WindowsIcon } from "@/components/Icons";
 import { SITE_CONFIG } from "@/lib/site-config";
 
@@ -77,8 +77,8 @@ export function DownloadHero() {
           onClick={() => scrollToSection("installation-guide")}
           className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 font-semibold text-sm transition-all shadow-2xs hover:border-purple-200 active:scale-95"
         >
-          <BookOpen className="w-4 h-4 text-purple-600" />
-          <span>Installation Guide</span>
+          <PlayCircle className="w-4 h-4 text-purple-600" />
+          <span>Installation Guide &amp; Video</span>
         </button>
       </div>
 

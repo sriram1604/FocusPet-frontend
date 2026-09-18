@@ -10,7 +10,7 @@ export function TableOfContents() {
     { id: "desktop-downloads", label: "Windows Desktop Release" },
     { id: "release-status", label: "Current Release Status" },
     { id: "browser-companion", label: "Browser Companion" },
-    { id: "installation-guide", label: "Installation Guide (7 Steps)" },
+    { id: "installation-guide", label: "Video & Installation Guide" },
     { id: "connection-verification", label: "Verify Connection" },
     { id: "troubleshooting", label: "Troubleshooting & FAQ" },
     { id: "system-requirements", label: "System Requirements" },

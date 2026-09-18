@@ -30,7 +30,7 @@ export function InstallationGuide() {
   return (
     <div id="installation-guide" className="scroll-mt-24">
       {/* Section Header */}
-      <div className="max-w-3xl mb-10">
+      <div className="max-w-3xl mb-8">
         <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-purple-50 border border-purple-200 text-xs font-semibold text-purple-700 mb-3 shadow-xs">
           <FileCode className="w-3.5 h-3.5" />
           <span>Step-by-Step Walkthrough</span>
@@ -41,6 +41,90 @@ export function InstallationGuide() {
         <p className="mt-3 text-base text-slate-600 leading-relaxed">
           Follow these numbered steps to set up FocusPet on Windows and connect your browser companion for active distraction tracking.
         </p>
+      </div>
+
+      {/* Featured Video Tutorial Card */}
+      <div id="installation-video" className="mb-12 rounded-3xl bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border border-slate-800 p-5 sm:p-7 shadow-2xl shadow-purple-950/20 text-white relative overflow-hidden">
+        {/* Ambient background glow */}
+        <div className="absolute top-0 right-1/4 w-96 h-48 bg-purple-600/15 rounded-full blur-3xl pointer-events-none -translate-y-1/2" />
+        <div className="absolute bottom-0 left-1/4 w-80 h-40 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none translate-y-1/2" />
+
+        {/* Video Header / Mockup Titlebar */}
+        <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-4 border-b border-slate-800 relative z-10">
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1.5">
+              <span className="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
+              <span className="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+              <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+            </div>
+            <div className="h-4 w-px bg-slate-800 hidden sm:block"></div>
+            <div className="flex items-center gap-2">
+              <span className="text-xs sm:text-sm font-bold text-slate-200">
+                FocusPet Installation &amp; Pairing Video Walkthrough
+              </span>
+            </div>
+          </div>
+
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-400/30 text-[11px] font-semibold text-purple-300">
+            <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+            <span>Video Tutorial</span>
+          </div>
+        </div>
+
+        {/* Video Player Container */}
+        <div className="relative z-10 rounded-2xl overflow-hidden bg-black/80 border border-slate-800 shadow-2xl">
+          <video
+            src="/videos/tutorial.mp4"
+            controls
+            preload="metadata"
+            playsInline
+            className="w-full aspect-video object-contain bg-black rounded-2xl focus:outline-hidden"
+          >
+            <source src="/videos/tutorial.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video playback.
+          </video>
+        </div>
+
+        {/* Quick Highlights / Video Key Stages */}
+        <div className="mt-5 pt-4 border-t border-slate-800/80 relative z-10">
+          <div className="text-xs font-semibold text-slate-400 mb-3 flex items-center justify-between">
+            <span>What you will learn in this video:</span>
+            <span className="text-[11px] text-purple-400 font-normal">Full setup ~ 2 minutes</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+            <div className="p-2.5 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-start gap-2 text-xs">
+              <span className="w-5 h-5 rounded-lg bg-purple-500/20 text-purple-300 font-bold text-[11px] flex items-center justify-center shrink-0">1</span>
+              <div>
+                <p className="font-semibold text-slate-200">Run Windows Setup</p>
+                <p className="text-[11px] text-slate-400">Install FocusPet.exe</p>
+              </div>
+            </div>
+
+            <div className="p-2.5 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-start gap-2 text-xs">
+              <span className="w-5 h-5 rounded-lg bg-purple-500/20 text-purple-300 font-bold text-[11px] flex items-center justify-center shrink-0">2</span>
+              <div>
+                <p className="font-semibold text-slate-200">Extract Companion</p>
+                <p className="text-[11px] text-slate-400">Unzip extension folder</p>
+              </div>
+            </div>
+
+            <div className="p-2.5 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-start gap-2 text-xs">
+              <span className="w-5 h-5 rounded-lg bg-purple-500/20 text-purple-300 font-bold text-[11px] flex items-center justify-center shrink-0">3</span>
+              <div>
+                <p className="font-semibold text-slate-200">Load Unpacked</p>
+                <p className="text-[11px] text-slate-400">Chrome / Edge Dev Mode</p>
+              </div>
+            </div>
+
+            <div className="p-2.5 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-start gap-2 text-xs">
+              <span className="w-5 h-5 rounded-lg bg-purple-500/20 text-purple-300 font-bold text-[11px] flex items-center justify-center shrink-0">4</span>
+              <div>
+                <p className="font-semibold text-slate-200">Register Pet</p>
+                <p className="text-[11px] text-slate-400">Paste Extension ID</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="space-y-8">
